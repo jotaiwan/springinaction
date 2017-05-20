@@ -1,0 +1,20 @@
+
+http://stackoverflow.com/questions/18852425/intellij-does-not-show-class-when-we-right-click-and-select-new
+IntelliJ does not show 'Class' when we right click and select 'New'
+
+The directory or one of the parent directories must be marked as Source Root (In this case, it appears in blue).
+
+If this is not the case, right click your root source directory (eg. josimple) -> Mark As -> Source Root.
+
+************************************************
+
+http://stackoverflow.com/questions/22063533/intellij-spring-is-not-being-recognized-unmapped-spring-configuration
+intellij - spring is not being recognized (Unmapped Spring configuration)
+
+Go to the project structure dialog (either by clicking the warning or through file=>project structure
+select the modules item in the left hand list
+go through and right click on the modules with missing files and select Add=>Spring
+in the new tab click the + button
+you should now see a list of the xml files. Check the boxes next to them
+I'm not entirely clear what this achieves apart from getting rid of the warnings! If anyone could shed any light on that it'd be good.
+
