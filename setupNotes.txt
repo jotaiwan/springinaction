@@ -1,4 +1,12 @@
 
+
+Error:java: javacTask: source release 1.8 requires target release 1.8
+http://stackoverflow.com/questions/29888592/errorjava-javactask-source-release-8-requires-target-release-1-8
+
+* go through few of them from front + the one answered by Gregory Mazur as well
+
+************************************************
+
 http://stackoverflow.com/questions/18852425/intellij-does-not-show-class-when-we-right-click-and-select-new
 IntelliJ does not show 'Class' when we right click and select 'New'
 
