@@ -1,5 +1,7 @@
 package com.practices;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by jotaiwan on 20/05/2017.
  */

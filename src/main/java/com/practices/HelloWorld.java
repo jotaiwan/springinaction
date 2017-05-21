@@ -7,15 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class HelloWorld {
 
+    @Autowired
     GoodWorld goodWorld;
 
     private String helloMessage;
-
-    private String goodMessage;
-
-    public HelloWorld() {
-        setGoodMessage(goodWorld.getGoodMessage());
-    }
 
     public String getHelloMessage() {
         return helloMessage;
@@ -26,10 +21,6 @@ public class HelloWorld {
     }
 
     public String getGoodMessage() {
-        return goodMessage;
-    }
-
-    public void setGoodMessage(String goodMessage) {
-        this.goodMessage = goodMessage;
+        return goodWorld.getGoodMessage();
     }
 }
