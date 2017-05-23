@@ -10,5 +10,10 @@ public class _chapter01 {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("/applicationContext.xml");
 
+        Visitor visitor = (Visitor) context.getBean("visitor");
+
+        visitor.friendVisitors();
+
+        System.out.println("Finished fun time with friends");
     }
 }

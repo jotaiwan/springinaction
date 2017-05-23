@@ -4,19 +4,19 @@ package com.chapter01;
  * Created by jotaiwan on 23/05/2017.
  */
 public class Visitor {
-    private String greeting;
+    private String partyTime;
 
-    public void friends() {
-        // have chatting..
-       System.out.println(greeting);
+    public void friendVisitors() {
+        // having fun
+       System.out.println(partyTime + " with friends");
     }
 
-    public String getGreeting() {
-        return greeting;
+    public String getPartyTime() {
+        return partyTime;
     }
 
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
+    public void setPartyTime(String partyTime) {
+        this.partyTime = partyTime;
     }
 
 }
