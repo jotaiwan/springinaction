@@ -13,8 +13,6 @@ public class _Practice {
 
         HelloWorld hello = (HelloWorld) context.getBean("helloWorld");
 
-//        GoodWorld good = (GoodWorld) context.getBean("goodWorld");
-
         System.out.println(hello.getHelloMessage());
 
         System.out.println(hello.getGoodMessage());
