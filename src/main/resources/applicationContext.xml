@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--
+    <context:component-scan base-package="com.chapter01" />
+    -->
+
+    <bean id="visitor" class="com.chapter01.Visitor">
+        <property name="partyTime" value="Party Time!!"/>
+    </bean>
+
+    <bean id="etiquette" class="com.chapter01.Etiquette">
+        <property name="beforeHavingFun" value="Hello!"/>
+        <property name="afterHavingFun" value="Good-bye!"/>
+    </bean>
+
+    <aop:config>
+        <aop:aspect ref="etiquette">
+            <aop:pointcut id="friends" expression="execution(* *.friendVisitors(..))"/>
+
+            <aop:before pointcut-ref="friends" method="beforeFun"/>
+            <aop:after pointcut-ref="friends" method="afterFun"/>
+        </aop:aspect>
+
+    </aop:config>
+
+</beans>
