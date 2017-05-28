@@ -1,6 +1,6 @@
 package com.chapter02.autoconfig;
 
-import org.springframework.stereotype.Component;
+        import org.springframework.stereotype.Component;
 
 /**
  * Created by jotaiwan on 27/05/2017.

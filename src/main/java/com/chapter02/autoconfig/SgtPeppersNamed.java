@@ -1,6 +1,5 @@
 package com.chapter02.autoconfig;
 
-import org.springframework.stereotype.Component;
 import javax.inject.Named;
 
 

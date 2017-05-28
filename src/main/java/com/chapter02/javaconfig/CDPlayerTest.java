@@ -1,4 +1,4 @@
-//package com.chapter02.autoconfig;
+//package com.chapter02.javaconfig;
 //
 //import org.junit.Rule;
 //import org.junit.Test;
@@ -27,24 +27,16 @@
 //    @Autowired
 //    private MediaPlayer player;
 //
-//    @Autowired
-//    private SgtPeppersWithSpecifyComponentName sgtPeppersWithSpecifyComponentName;
-//
-//
 //    @Test
 //    public void cdShouldNotBeNull() {
 //        assertNotNull(cd);
 //    }
 //
-//    @Test
-//    public void sgtPeppersWithSpecifyComponentNameShouldNotBeNull() {
-//        assertNotNull(sgtPeppersWithSpecifyComponentName);
-//    }
 //
 //    @Test
 //    public void play() {
 //        player.play();
-//        assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\r\n", log.getLog());
+//        assertEquals("Play song by artist\r\n", log.getLog());
 //    }
 //
 //}

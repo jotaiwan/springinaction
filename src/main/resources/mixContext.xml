@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="blankDisc" class="com.chapter02.mix.BlankDisc" c:_0="title" c:_1="The Beatles">
+        <constructor-arg>
+            <value>track01</value>
+            <value>track02</value>
+            <value>track03</value>
+        </constructor-arg>
+    </bean>
+
+</beans>
