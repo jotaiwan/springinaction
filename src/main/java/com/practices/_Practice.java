@@ -11,6 +11,10 @@ public class _Practice {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("/practiceContext.xml");
 
+        BeanWorld bean = (BeanWorld) context.getBean("beanWorld");
+
+        BeanDiffWorld beanDiff = (BeanDiffWorld) context.getBean("testBeanName");
+
         HelloWorld hello = (HelloWorld) context.getBean("helloWorld");
 
         System.out.println(hello.getHelloMessage());
