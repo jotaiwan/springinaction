@@ -1,7 +1,5 @@
 package com.chapter02.javaconfig;
 
-import com.chapter02.*;
-import com.componentscan.ComponentScanConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

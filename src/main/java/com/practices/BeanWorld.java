@@ -9,6 +9,10 @@ import org.springframework.stereotype.Component;
 public class BeanWorld {
     private String beanName;
 
+    public void say() {
+        System.out.println("Say Hi");
+    }
+
     public String getBeanName() {
         return beanName;
     }

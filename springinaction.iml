@@ -7,6 +7,7 @@
           <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/practiceContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/xmlContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/xmlscanContext.xml</file>
         </fileset>
       </configuration>
     </facet>
