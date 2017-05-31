@@ -1,5 +1,6 @@
 package com.chapter02.autoconfig;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
@@ -9,6 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -44,7 +46,8 @@ public class CDPlayerTest {
     @Test
     public void play() {
         player.play();
-        assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\r\n", log.getLog());
+        assertTrue(StringUtils.contains(log.getLog(), "Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles"));
+//        assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\r\n", log.getLog());
     }
 
 }
