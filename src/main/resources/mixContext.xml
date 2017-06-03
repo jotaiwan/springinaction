@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- import java-based: p62-->
+    <bean class="com.chapter02.componentscan.ComponentScanConfig" />
+
+    <!-- import xml: p62 -->
+    <import resource="practiceContext.xml" />
+
+    <bean id="blankDisc" class="com.chapter02.mix.BlankDisc" c:_0="title" c:_1="The Beatles">
+
+    </bean>
+
+</beans>
