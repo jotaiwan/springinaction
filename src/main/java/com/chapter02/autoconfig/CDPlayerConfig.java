@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(basePackages="com.chapter02.autoconfig")
-@ComponentScan(basePackages={"com.chapter02.autoconfig"})       // can add multi packages
-@ComponentScan(basePackageClasses={CDPlayer.class})         // can add multi classes
+//@ComponentScan(basePackages={"com.chapter02.autoconfig"})       // can add multi packages
+//@ComponentScan(basePackageClasses={CDPlayer.class})         // can add multi classes
 public class CDPlayerConfig {
 }
