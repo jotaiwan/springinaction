@@ -1,6 +1,7 @@
 package com.chapter03.configuration;
 
 import com.beans.music.BlankDisc;
+import com.beans.music.BlankDiskSpEL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,6 +36,11 @@ public class ExpressiveConfig {
         String[] profiles = environment.getActiveProfiles();
 
         return new BlankDisc(title, artist);
+    }
+
+    @Bean
+    public BlankDiskSpEL blankDiskSpEL() {
+        return new BlankDiskSpEL(environment.getProperty("disc.title"), environment.getProperty("disc.artist"));
     }
 
     @Bean

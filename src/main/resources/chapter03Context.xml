@@ -18,8 +18,13 @@
         <context:property-placeholder/>
 
         <!--
-        <bean id="blankDisc" class="com.chapter02.mix.BlankDisc" c:_0="${disc.title}" c:_1="${disc.artist}" />
+        <bean id="blankDisc" class="com.beans.music.BlankDisc" c:_0="${disc.title}" c:_1="${disc.artist}" />
         -->
+
+        <bean id="blankDiscSpEL" class="com.beans.music.BlankDiskSpEL"
+              c:_0="#{systemProperties['disc.title']}}"
+              c:_1="#{systemProperties['disc.artist']}" />
+
         <beans profile="chapter03">
             <bean id="iceCream" class="com.beans.dessert.IceCream" primary="true"/>
             <bean id="cart" class="com.beans.shopping.ShoppingCart" scope="session" >

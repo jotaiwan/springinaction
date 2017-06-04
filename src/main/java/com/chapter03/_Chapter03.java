@@ -29,24 +29,19 @@ public class _Chapter03 {
     public static void main(String[] args) {
         System.out.println("Chapter03 Starts ..........");
 
-        ApplicationContext ctx = getChapter03ConfigContext();
-
         ApplicationContext ctxExp = getExpressiveContext();
-
-//        ApplicationContext xmlContext = new ClassPathXmlApplicationContext("/chapter03Context.xml");
 
         BlankDisc blankDisc = (BlankDisc) ctxExp.getBean(BlankDisc.class);
         blankDisc.play();
 
-        CompactDisc cd = ctx.getBean(CompactDisc.class);
+        ApplicationContext ctxChapter03Config = getChapter03ConfigContext();
+
+        // here is broken.. coz can't find the bean
+        CompactDisc cd = ctxChapter03Config.getBean(CompactDisc.class);
         cd.play();
 
-        Dessert dessert = ctx.getBean(Dessert.class);
+        Dessert dessert = ctxChapter03Config.getBean(Dessert.class);
         System.out.println("Dessert is " + dessert.displayName());
-
-        Lunch menu = new Lunch();
-        menu.order();
-//        ctx.getBean(IceCream.class);
 
         System.out.println("End of Chapter03 ..........");
     }

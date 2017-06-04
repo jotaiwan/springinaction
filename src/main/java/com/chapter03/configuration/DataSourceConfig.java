@@ -40,10 +40,4 @@ public class DataSourceConfig {
     }
 
 
-    // conditional
-    @Bean
-    @Conditional(MagicExistsCondition.class)
-    public MagicBean magicBean() {
-        return new MagicBean();
-    }
 }

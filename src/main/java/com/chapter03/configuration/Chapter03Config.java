@@ -1,5 +1,6 @@
 package com.chapter03.configuration;
 
+import com.beans.MagicBean;
 import com.beans.Notepad;
 import com.beans.dessert.Cake;
 import com.beans.dessert.Cookies;
@@ -7,6 +8,7 @@ import com.beans.dessert.IceCream;
 import com.beans.music.CDPlayer;
 import com.beans.music.SgtPeppers;
 import com.beans.shopping.ShoppingCart;
+import com.chapter03.condition.MagicExistsCondition;
 import com.interfaces.Dessert;
 import com.interfaces.music.CompactDisc;
 import com.interfaces.music.MediaPlayer;
@@ -16,12 +18,12 @@ import org.springframework.context.annotation.*;
 import org.springframework.web.context.WebApplicationContext;
 
 @Configuration
-//@Profile("chapter03")
+@Profile("chapter03")
 //@ComponentScan(basePackages = {"com.beans"})
-//@Import(CDPlayerConfig.class)
+@Import(CDPlayerConfig.class)
 public class Chapter03Config {
 
-//    @Autowired CDPlayerConfig cdPlayerConfig;
+    @Autowired CDPlayerConfig cdPlayerConfig;
 
 
     /**
@@ -35,10 +37,10 @@ public class Chapter03Config {
     /**
      * inject compact disc
      * */
-    @Bean
-    public CDPlayerConfig cdPlayerConfig() {
-        return new CDPlayerConfig();
-    }
+//    @Bean
+//    public CDPlayerConfig cdPlayerConfig() {
+//        return new CDPlayerConfig();
+//    }
 //
 //    @Bean
 //    public CompactDisc sgtPeppers() {
@@ -79,6 +81,14 @@ public class Chapter03Config {
     @Scope(value= WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.INTERFACES)
     public ShoppingCart cart() {
         return new ShoppingCart();
+    }
+
+
+    // conditional
+    @Bean
+    @Conditional(MagicExistsCondition.class)
+    public MagicBean magicBean() {
+        return new MagicBean();
     }
 
 //    @Bean

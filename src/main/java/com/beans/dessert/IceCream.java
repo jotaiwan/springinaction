@@ -3,6 +3,7 @@ package com.beans.dessert;
 import com.annotation.Cold;
 import com.annotation.Creamy;
 import com.interfaces.Dessert;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Cold
 @Creamy
+@Primary
 public class IceCream implements Dessert {
 
     private String name;
@@ -21,7 +23,7 @@ public class IceCream implements Dessert {
     }
 
     public String getName() {
-        return name;
+        return "Icecream";
     }
 
     public void setName(String name) {

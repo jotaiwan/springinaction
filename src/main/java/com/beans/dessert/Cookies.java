@@ -16,10 +16,10 @@ public class Cookies implements Dessert {
     }
 
     public String getName() {
-        return name;
+        return "cookies";
     }
 
     public void setName(String name) {
-        this.name = "cookies";
+        this.name = name;
     }
 }

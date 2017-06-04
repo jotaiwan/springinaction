@@ -17,10 +17,10 @@ public class Cake implements Dessert {
     }
 
     public String getName() {
-        return name;
+        return "cake";
     }
 
     public void setName(String name) {
-        this.name = "cake";
+        this.name = name;
     }
 }
