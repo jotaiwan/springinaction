@@ -6,13 +6,9 @@ import com.beans.dessert.Cake;
 import com.beans.dessert.Cookies;
 import com.beans.dessert.IceCream;
 import com.beans.music.CDPlayer;
-import com.beans.music.SgtPeppers;
 import com.beans.shopping.ShoppingCart;
 import com.chapter03.condition.MagicExistsCondition;
-import com.interfaces.Dessert;
 import com.interfaces.music.CompactDisc;
-import com.interfaces.music.MediaPlayer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.*;
 import org.springframework.web.context.WebApplicationContext;
@@ -23,7 +19,7 @@ import org.springframework.web.context.WebApplicationContext;
 @Import(CDPlayerConfig.class)
 public class Chapter03Config {
 
-    @Autowired CDPlayerConfig cdPlayerConfig;
+//    @Autowired CDPlayerConfig cdPlayerConfig;
 
 
     /**
@@ -34,6 +30,11 @@ public class Chapter03Config {
         return new DataSourceConfig();
     }
 
+
+    @Bean
+    public CDPlayer cdPlayer(CompactDisc compactDisc) {
+        return new CDPlayer(compactDisc);
+    }
     /**
      * inject compact disc
      * */

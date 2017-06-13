@@ -14,13 +14,13 @@ import org.springframework.context.annotation.Configuration;
 public class CDPlayerConfig {
 
     @Bean
-    public CompactDisc sgtPeppers() {
+    public CompactDisc compactDisc() {
         return new SgtPeppers();
     }
 
     @Bean
     public MediaPlayer mediaPlayer() {
-        return new CDPlayer(sgtPeppers());
+        return new CDPlayer(compactDisc());
     }
 
 }
