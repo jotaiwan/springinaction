@@ -51,7 +51,7 @@
 
     <!-- not working : p56 -->
     <bean id="blankDiscNew2" class="com.chapter02.xmlconfig.BlankDiscNew2"
-          p:title="title2" p:artist="artist2" p:track-ref="trackList" />
+          p:title="title2" p:artist="artist2" p:tracks-ref="trackList" />
 
 
 

@@ -1,11 +1,13 @@
 package com.chapter02.javaconfig;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by jotaiwan on 28/05/2017.
  */
 @Component
+@Primary
 public class SgtPeppers implements CompactDisc {
 
     private String song = "song";
